@@ -1,0 +1,135 @@
+Compiler: g++ (Debian 14.2.0-19) 14.2.0
+Flags: -std=c++17 -Wall -Wextra -O2
+
+====================================================================
+Task01/Q1_StaffHierarchy.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task01/Q1_StaffHierarchy.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task01/Q1_StaffHierarchy
+
+Exit: 0
+Output:
+Meena (101): 79000
+Arun (102): 42600
+Ravi (103): 18000
+
+
+====================================================================
+Task02/Q2_VirtualDiamond.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond
+
+Compiler diagnostics:
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp: In function ‘int main()’:
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:42:24: error: ‘std::string Person::name’ is protected within this context
+   42 |     cout << "\n" << ta.name << ' ' << ta.id << '\n';
+      |                        ^~~~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:7:12: note: declared protected here
+    7 |     string name;
+      |            ^~~~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:42:42: error: ‘int Person::id’ is protected within this context
+   42 |     cout << "\n" << ta.name << ' ' << ta.id << '\n';
+      |                                          ^~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:8:9: note: declared protected here
+    8 |     int id;
+      |         ^~
+
+COMPILE FAILED (1)
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp: In function ‘int main()’:
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:42:24: error: ‘std::string Person::name’ is protected within this context
+   42 |     cout << "\n" << ta.name << ' ' << ta.id << '\n';
+      |                        ^~~~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:7:12: note: declared protected here
+    7 |     string name;
+      |            ^~~~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:42:42: error: ‘int Person::id’ is protected within this context
+   42 |     cout << "\n" << ta.name << ' ' << ta.id << '\n';
+      |                                          ^~
+/mnt/data/DSA01-192511397-Assignment4/Task02/Q2_VirtualDiamond.cpp:8:9: note: declared protected here
+    8 |     int id;
+      |         ^~
+
+
+====================================================================
+Task02/Q2_NonVirtualDiamond.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task02/Q2_NonVirtualDiamond.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task02/Q2_NonVirtualDiamond
+
+Exit: 0
+Output:
+Person Student Person Staff TA 
+
+
+====================================================================
+Task03/Q3_ConstructionAndMemberClasses.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task03/Q3_ConstructionAndMemberClasses.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task03/Q3_ConstructionAndMemberClasses
+
+Exit: 0
+Output:
+Address+ Person+ Course+ Student+ 192311001 Kavya (19) Salem-636001
+~Student ~Course ~Person ~Address 
+Address+ Person+ Staff+ ~Staff ~Person ~Address 
+
+
+====================================================================
+Task03/Q3_CompleteCode.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task03/Q3_CompleteCode.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task03/Q3_CompleteCode
+
+Exit: 0
+Output:
+192311001 Kavya (19) Salem-636001
+
+
+====================================================================
+Task04/Q4_PolymorphicAccounts.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task04/Q4_PolymorphicAccounts.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task04/Q4_PolymorphicAccounts
+
+Exit: 0
+Output:
+3.5
+4
+Account destroyed
+SeniorAccount destroyed
+Account destroyed
+
+
+====================================================================
+Task04/Q4_PredictOutput.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task04/Q4_PredictOutput.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task04/Q4_PredictOutput
+
+Exit: 0
+Output:
+3.5 4 3.5
+
+
+====================================================================
+Task05/Q5_CartThisPointer.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task05/Q5_CartThisPointer.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task05/Q5_CartThisPointer
+
+Exit: 0
+Output:
+324.00
+50.00 50.00 45.00
+highest cart index: 0
+
+
+====================================================================
+Task05/Q5_CompleteCode.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task05/Q5_CompleteCode.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task05/Q5_CompleteCode
+
+Exit: 0
+Output:
+324.00
+
+
+====================================================================
+Task06/Q6_VehicleRentalFleet.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment4/Task06/Q6_VehicleRentalFleet.cpp -o /mnt/data/DSA01-192511397-Assignment4/Task06/Q6_VehicleRentalFleet
+
+Exit: 0
+Output:
+0 AVAILABLE Bicycle TN01-B100 charge=80
+1 AVAILABLE TwoWheeler TN01-T200 charge=275
+2 AVAILABLE Car TN01-C300 charge=1600
+3 AVAILABLE ElectricCar TN01-E400 charge=1950
+4 AVAILABLE ElectricBus TN01-EB500 charge=5700
+rent bicycle: true
+late return total: 210
+rent electric car: true
+electric car return: 3750
