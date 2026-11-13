@@ -1,0 +1,139 @@
+Compiler: g++ (Debian 14.2.0-19) 14.2.0
+Flags: -std=c++17 -Wall -Wextra -O2
+
+========================================================================
+Task01/Q1_CallByValueReferencePointer.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_CallByValueReferencePointer.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_CallByValueReferencePointer
+Exit code: 0
+Program output:
+inside value function: 40500
+stored after value: 45000
+stored after reference: 40500
+stored after pointer: 40500
+
+
+========================================================================
+Task01/Q1_PredictOutput.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_PredictOutput.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_PredictOutput
+Exit code: 0
+Program output:
+1 12 13
+1 100
+16 13 6 
+
+
+========================================================================
+Task01/Q1_CompleteCode.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_CompleteCode.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task01/Q1_CompleteCode
+Exit code: 0
+Program output:
+after call by value : 45000
+after call by reference: 40500
+
+
+========================================================================
+Task02/Q2_ReturnByReference.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference
+Compiler diagnostics:
+/mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp: In function ‘int& danglingReferenceDemo()’:
+/mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp:13:12: warning: reference to local variable ‘local’ returned [-Wreturn-local-addr]
+   13 |     return local; // compiler warning: reference to local variable returned
+      |            ^~~~~
+/mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp:12:9: note: declared here
+   12 |     int local = 42;
+      |         ^~~~~
+/mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp: In function ‘int main()’:
+/mnt/data/DSA01-192511397-Assignment2/Task02/Q2_ReturnByReference.cpp:34:10: warning: unused variable ‘oldReference’ [-Wunused-variable]
+   34 |     int& oldReference = dynamicMarks[1];
+      |          ^~~~~~~~~~~~
+
+Exit code: 0
+Program output:
+highest after moderation: 93
+index: 1, value: 93
+pointer value: 93
+vector size after growth: 4
+
+
+========================================================================
+Task03/Q3_DefaultsOverloading.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task03/Q3_DefaultsOverloading.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task03/Q3_DefaultsOverloading
+Exit code: 0
+Program output:
+charge(250): 5.00
+charge(2.0): 80.00
+charge(2.0f): 80.00
+charge(500, true): 40.00
+charge(1.5, false, true): 75.00
+charge(parcel): 125.00
+
+
+========================================================================
+Task04/Q4_SavingsAccount.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task04/Q4_SavingsAccount.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task04/Q4_SavingsAccount
+Exit code: 0
+Program output:
+Account: SB1001 Balance: 1650
+Recent transactions (oldest to newest):
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+
+
+========================================================================
+Task05/Q5_StaticBusTickets.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task05/Q5_StaticBusTickets.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task05/Q5_StaticBusTickets
+Exit code: 0
+Program output:
+Asha: Seat 1
+Bala: Seat 2
+Chitra: Seat 3
+Dev: Waiting
+Issued: 3
+Esha: Waiting
+Farhan: Waiting
+Issued after second batch: 3
+
+
+========================================================================
+Task05/Q5_PredictOutput.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task05/Q5_PredictOutput.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task05/Q5_PredictOutput
+Exit code: 0
+Program output:
+101 103 104 4
+
+
+========================================================================
+Task06/Q6_FriendInline.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task06/Q6_FriendInline.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task06/Q6_FriendInline
+Exit code: 0
+Program output:
+205 false
+10 true
+0 false
+
+
+========================================================================
+Task06/Q6_InlineBenchmark.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task06/Q6_InlineBenchmark.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task06/Q6_InlineBenchmark
+Exit code: 0
+Program output:
+inline_us=14460
+noinline_us=22270
+
+
+========================================================================
+Task07/Q7_CircularBufferBenchmark.cpp
+$ g++ -std=c++17 -Wall -Wextra -O2 /mnt/data/DSA01-192511397-Assignment2/Task07/Q7_CircularBufferBenchmark.cpp -o /mnt/data/DSA01-192511397-Assignment2/Task07/Q7_CircularBufferBenchmark
+Exit code: 0
+Program output:
+capacity=50 operations=2000000
+shift_us=21158
+circular_us=7346
