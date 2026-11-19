@@ -1,0 +1,13 @@
+Copy constructor called
+
+Prescription details:
+P: Ibuprofen ORS
+Q: Paracetamol Cetirizine
+R: Paracetamol ORS
+
+Self-assignment test: Ibuprofen
+Copy constructor called
+Function received object by value.
+Copies after pass by value: 1
+Function received object by reference.
+Copies after pass by reference: 0
