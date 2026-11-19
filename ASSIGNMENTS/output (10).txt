@@ -1,8 +1,0 @@
-First Text: Hello 
-Second Text: World
-Combined Text: Hello World
-a == d: true
-a != b: true
-Copied Text: Hello World
-Assigned Text: Hello World
-After Self Assignment: Hello World
