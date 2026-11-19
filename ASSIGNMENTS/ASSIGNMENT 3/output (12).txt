@@ -1,0 +1,20 @@
+COMPLEX NUMBER OPERATIONS
+First Number: 5 + 3i
+Second Number: 2 + 4i
+Addition: 7 + 7i
+Subtraction: 3 - 1i
+Multiplication: -2 + 26i
+Division: 1.1 - 0.7i
+Magnitude: 5.83095
+Equality: false
+
+RLC CIRCUIT ANALYSIS
+Resistance Impedance: 10 + 0i
+Inductor Impedance: 0 + 31.4159i
+Capacitor Impedance: 0 - 3.1831i
+
+Series Impedance: 10 + 28.2328i
+Series Impedance Magnitude: 29.9515 Ohms
+
+Parallel Impedance: 1.11471 - 3.14715i
+Parallel Impedance Magnitude: 3.33873 Ohms
