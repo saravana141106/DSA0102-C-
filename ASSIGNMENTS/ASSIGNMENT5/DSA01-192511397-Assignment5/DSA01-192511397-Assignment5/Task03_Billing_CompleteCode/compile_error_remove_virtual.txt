@@ -1,0 +1,9 @@
+remove_virtual_total.cpp:12:9: error: initializer specified for non-virtual method 'double Bill::total() const'
+   12 |  double total() const = 0;
+      |         ^~~~~
+remove_virtual_total.cpp:25:9: error: 'double OutPatient::total() const' marked 'override', but does not override
+   25 |  double total() const override { return consultation + tests; }
+      |         ^~~~~
+remove_virtual_total.cpp:35:9: error: 'double InPatient::total() const' marked 'override', but does not override
+   35 |  double total() const override { return days * perDay + surgery; }
+      |         ^~~~~

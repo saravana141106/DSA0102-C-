@@ -1,0 +1,13 @@
+digraph G { rankdir=BT; graph [fontname="Helvetica", fontsize=11, nodesep=0.6];
+node [shape=plaintext, fontname="Helvetica", fontsize=10];
+Payer [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4">
+ <tr><td bgcolor="#eef3fb"><b>«abstract» Payer</b></td></tr>
+ <tr><td align="left">+ virtual ~Payer()</td></tr>
+ <tr><td align="left">+ name() const  [pure virtual]</td></tr>
+ <tr><td align="left">+ amountCovered(const Bill&amp;) const  [pure virtual]</td></tr></table>>];
+SP [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4"><tr><td bgcolor="#f7f7f7"><b>SelfPay</b></td></tr><tr><td align="left">amountCovered → 0</td></tr></table>>];
+IN [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4"><tr><td bgcolor="#f7f7f7"><b>Insurance</b></td></tr><tr><td align="left">- coverLimit, copayPercent</td></tr><tr><td align="left">throws ClaimError if total &gt; cover</td></tr></table>>];
+GS [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4"><tr><td bgcolor="#f7f7f7"><b>GovernmentScheme</b></td></tr><tr><td align="left">- packageRates : map</td></tr><tr><td align="left">throws UnknownPackageError</td></tr></table>>];
+CP [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4"><tr><td bgcolor="#fdf3e1"><b>CorporatePayer (B4 extension)</b></td></tr><tr><td align="left">- percent, cap</td></tr></table>>];
+SP -> Payer [arrowhead=empty]; IN -> Payer [arrowhead=empty]; GS -> Payer [arrowhead=empty]; CP -> Payer [arrowhead=empty];
+}

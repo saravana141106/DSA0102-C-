@@ -1,0 +1,34 @@
+== B1.1 core matrix (OP, IP, DC) x (SelfPay, Insurance, Government, Corporate)
+PASS total OP: got 1700, expected 1700
+PASS total IP: got 47500, expected 47500
+PASS total DC: got 30000, expected 30000
+PASS SelfPay covers OP: got 0, expected 0
+PASS Insurance covers OP  (1700 x 0.9): got 1530, expected 1530
+PASS Insurance covers IP  (47500 x 0.9): got 42750, expected 42750
+PASS Insurance covers DC  (30000 x 0.9): got 27000, expected 27000
+PASS Government covers OP (min 1000, 1700): got 1000, expected 1000
+PASS Government covers IP (min 45000, 47500): got 45000, expected 45000
+PASS Government covers DC (min 25000, 30000): got 25000, expected 25000
+PASS Corporate covers OP  (850, cap 20000): got 850, expected 850
+PASS Corporate covers IP  (min 23750, cap 20000): got 20000, expected 20000
+PASS Corporate covers DC  (min 15000, cap 20000): got 15000, expected 15000
+== Error paths (each must be caught, with a clear reason)
+PASS claim above cover: caught exceeds cover
+PASS unknown package code: caught unknown package DC
+PASS negative consultation charge: caught negative consultation
+PASS negative days: caught negative days
+PASS negative corporate cap: caught negative corporate cap
+PASS missing patient record: caught missing record OP-99
+PASS registry lookup OP-1 total: got 1700, expected 1700
+== Batch settlement and day total
+PASS day total over Bill* (1700 + 47500 + 30000): got 79200, expected 79200
+  Ravi via Insurance: paid 1700.000000
+  Meena via Insurance: rejected (exceeds cover)
+  Asha via Insurance: paid 30000.000000
+PASS accepted claims: got 2, expected 2
+PASS rejected claims (bill count preserved): got 1, expected 1
+PASS bills still owned after batch: got 3, expected 3
+== Exception paths under scope guards
+  ~batch-scope
+  top-level caught: negative tests
+ALL TESTS PASSED (0 failures)

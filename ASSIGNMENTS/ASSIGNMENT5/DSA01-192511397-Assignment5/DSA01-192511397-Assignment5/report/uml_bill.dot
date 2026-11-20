@@ -1,0 +1,26 @@
+digraph G { rankdir=BT; graph [fontname="Helvetica", fontsize=11, nodesep=0.6];
+node [shape=plaintext, fontname="Helvetica", fontsize=10];
+Bill [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4">
+ <tr><td bgcolor="#eef3fb"><b>«abstract» Bill</b></td></tr>
+ <tr><td align="left"># patient : string</td></tr>
+ <tr><td align="left">+ virtual ~Bill()  [virtual]</td></tr>
+ <tr><td align="left">+ total() const  [pure virtual = 0]</td></tr>
+ <tr><td align="left">+ type() const  [pure virtual = 0]</td></tr>
+ <tr><td align="left">+ patientName() const noexcept</td></tr></table>>];
+OP [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4">
+ <tr><td bgcolor="#f7f7f7"><b>OutPatientBill</b></td></tr>
+ <tr><td align="left">- consultation, tests : double</td></tr>
+ <tr><td align="left">+ total() const  [overridden]</td></tr>
+ <tr><td align="left">+ type() const  [overridden] → "OP"</td></tr></table>>];
+IP [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4">
+ <tr><td bgcolor="#f7f7f7"><b>InPatientBill</b></td></tr>
+ <tr><td align="left">- days : int; perDay, surgery : double</td></tr>
+ <tr><td align="left">+ total() const  [overridden]</td></tr>
+ <tr><td align="left">+ type() const  [overridden] → "IP"</td></tr></table>>];
+DC [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="4">
+ <tr><td bgcolor="#fdf3e1"><b>DayCareBill (B4 extension)</b></td></tr>
+ <tr><td align="left">- packagePrice : double</td></tr>
+ <tr><td align="left">+ total() const  [overridden]</td></tr>
+ <tr><td align="left">+ type() const  [overridden] → "DC"</td></tr></table>>];
+OP -> Bill [arrowhead=empty]; IP -> Bill [arrowhead=empty]; DC -> Bill [arrowhead=empty];
+}

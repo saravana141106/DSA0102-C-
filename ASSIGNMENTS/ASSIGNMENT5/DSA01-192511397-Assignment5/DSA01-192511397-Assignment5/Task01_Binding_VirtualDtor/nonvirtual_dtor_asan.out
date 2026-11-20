@@ -1,0 +1,22 @@
+=================================================================
+==169==ERROR: AddressSanitizer: new-delete-type-mismatch on 0x503000000040 in thread T0:
+  object passed to delete has wrong type:
+  size of the allocated type:   32 bytes;
+  size of the deallocated type: 8 bytes.
+    #0 0x7f143ccff5e8 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
+    #1 0x560ebc28c442 in main /home/claude/DSA01-192511397-Assignment5/Task01_Binding_VirtualDtor/nonvirtual_dtor.cpp:21
+    #2 0x7f143c42a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #3 0x7f143c42a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #4 0x560ebc28c324 in _start (/home/claude/DSA01-192511397-Assignment5/Task01_Binding_VirtualDtor/nonvirtual_dtor_asan+0x2324) (BuildId: e6671ca84521de9a296f42fbec0e7f4f1261318e)
+
+0x503000000040 is located 0 bytes inside of 32-byte region [0x503000000040,0x503000000060)
+allocated by thread T0 here:
+    #0 0x7f143ccfe548 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x560ebc28c403 in main /home/claude/DSA01-192511397-Assignment5/Task01_Binding_VirtualDtor/nonvirtual_dtor.cpp:19
+    #2 0x7f143c42a1c9  (/lib/x86_64-linux-gnu/libc.so.6+0x2a1c9) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #3 0x7f143c42a28a in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x2a28a) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)
+    #4 0x560ebc28c324 in _start (/home/claude/DSA01-192511397-Assignment5/Task01_Binding_VirtualDtor/nonvirtual_dtor_asan+0x2324) (BuildId: e6671ca84521de9a296f42fbec0e7f4f1261318e)
+
+SUMMARY: AddressSanitizer: new-delete-type-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164 in operator delete(void*, unsigned long)
+==169==HINT: if you don't care about these errors you may set ASAN_OPTIONS=new_delete_type_mismatch=0
+==169==ABORTING

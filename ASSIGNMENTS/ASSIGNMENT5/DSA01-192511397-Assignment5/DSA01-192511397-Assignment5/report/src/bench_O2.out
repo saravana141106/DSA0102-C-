@@ -1,0 +1,28 @@
+== B3.1 correctness on 10 bills
+virtual=246095.0 switch=246095.0 variant=246095.0 agree=YES
+
+== B3.2 total() over n bills (-O2, median of 5 runs)
+n            design     time_ms      ns_per_bill 
+1000         virtual    0.002        2.48        
+1000         switch     0.001        0.64        
+1000         variant    0.001        0.64        
+1000000      virtual    4.055        4.06        
+1000000      switch     1.748        1.75        
+1000000      variant    2.249        2.25        
+10000000     virtual    47.363       4.74        
+10000000     switch     23.279       2.33        
+10000000     variant    26.995       2.70        
+
+== Space per element (bytes, sizeof)
+VOP (virtual, excl. heap header) = 24, VIP = 32, unique_ptr = 8
+SBill (switch record)            = 24
+VarBill (variant, tag + largest)  = 32
+
+== B3.3 validate 1,000,000 bills: return codes vs exceptions (-O2, median of 5)
+invalid  design       time_ms      rejected    
+0        return-code  1.096        0           
+0        exception    0.943        0           
+1        return-code  1.128        10000       
+1        exception    10.871       10000       
+50       return-code  1.112        500000      
+50       exception    490.592      500000      

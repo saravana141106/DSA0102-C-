@@ -1,0 +1,8 @@
+invalid  design         time_ms      rejected  
+0        optional       1.085        0         
+0        exception      2.537        0         
+1        optional       1.063        10000     
+1        exception      14.184       10000     
+50       optional       1.120        500000    
+50       exception      642.828      500000    
+sizeof(double)=8, sizeof(std::optional<double>)=16

@@ -1,0 +1,8 @@
+digraph G { rankdir=BT; graph [fontname="Helvetica", fontsize=11, nodesep=0.5];
+node [shape=box, style="rounded,filled", fillcolor="#eef3fb", fontname="Helvetica", fontsize=10];
+std_exc [label="std::exception"]; rt [label="std::runtime_error"];
+BE [label="BillingError"]; NC [label="NegativeChargeError"]; CE [label="ClaimError\n(\"exceeds cover\")"];
+UP [label="UnknownPackageError"]; MR [label="MissingRecordError"];
+rt -> std_exc [arrowhead=empty]; BE -> rt [arrowhead=empty];
+NC -> BE [arrowhead=empty]; CE -> BE [arrowhead=empty]; UP -> BE [arrowhead=empty]; MR -> BE [arrowhead=empty];
+}

@@ -1,0 +1,7 @@
+nonvirtual_dtor.cpp:9:2: error: 'OPBill::~OPBill()' marked 'override', but does not override
+    9 |  ~OPBill() override { std::cout << "~OPBill "; }
+      |  ^
+nonvirtual_dtor.cpp: In function 'int main()':
+nonvirtual_dtor.cpp:16:2: warning: deleting object of abstract class type 'Bill' which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+   16 |  delete b;                                    // UB: ~OPBill never runs
+      |  ^~~~~~~~

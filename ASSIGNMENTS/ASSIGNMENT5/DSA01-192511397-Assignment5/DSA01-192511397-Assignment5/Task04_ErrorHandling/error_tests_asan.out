@@ -1,0 +1,21 @@
+[T1] domain errors
+  NegativeChargeError: negative consultation
+  ClaimError: exceeds cover
+[T2] unknown package code
+  UnknownPackageError: unknown package DC
+[T3] std::stod on bad input
+  "1500" -> 1500 (parsed; trailing text ignored)
+  "12abc" -> 12 (parsed; trailing text ignored)
+  "abc" -> invalid_argument: stod
+  "1e400" -> out_of_range: stod
+[T4] allocation failure
+  ~before-alloc
+  std::bad_alloc caught: std::bad_array_new_length
+[T5] top-level catch(...)
+  item 1 ok
+  ~item-1
+  ~item-2
+  unknown exception caught at top level; batch continues
+  item 3 ok
+  ~item-3
+program finished normally

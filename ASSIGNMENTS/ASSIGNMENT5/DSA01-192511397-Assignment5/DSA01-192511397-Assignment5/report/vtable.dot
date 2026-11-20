@@ -1,0 +1,17 @@
+digraph G { rankdir=LR; graph [fontname="Helvetica", fontsize=11];
+node [shape=plaintext, fontname="Courier", fontsize=10];
+b [label=<<table border="1" cellborder="1" cellspacing="0"><tr><td bgcolor="#fdf3e1">b : Bill*</td></tr><tr><td port="p">vptr</td></tr></table>>];
+objOP [label=<<table border="1" cellborder="1" cellspacing="0"><tr><td bgcolor="#eef3fb">OPBill object</td></tr><tr><td port="v">vptr</td></tr><tr><td>patient, ...</td></tr></table>>];
+VT_OP [label=<<table border="1" cellborder="1" cellspacing="0"><tr><td bgcolor="#f7f7f7" colspan="2"><b>vtable of OPBill</b></td></tr>
+ <tr><td>[0] &nbsp;~OPBill (D1)</td><td>&rarr; OPBill::~OPBill</td></tr>
+ <tr><td>[1] &nbsp;~OPBill (D0)</td><td>&rarr; OPBill::~OPBill (deleting)</td></tr>
+ <tr><td port="t">[2] &nbsp;total()</td><td>&rarr; OPBill::total</td></tr>
+ <tr><td>[3] &nbsp;type()</td><td>&rarr; OPBill::type</td></tr></table>>];
+VT_B [label=<<table border="1" cellborder="1" cellspacing="0"><tr><td bgcolor="#f7f7f7" colspan="2"><b>vtable of Bill (abstract)</b></td></tr>
+ <tr><td>[0] &nbsp;~Bill (D1)</td><td>&rarr; Bill::~Bill</td></tr>
+ <tr><td>[1] &nbsp;~Bill (D0)</td><td>&rarr; Bill::~Bill (deleting)</td></tr>
+ <tr><td>[2] &nbsp;total()</td><td>= pure (no body)</td></tr>
+ <tr><td>[3] &nbsp;type()</td><td>= pure (no body)</td></tr></table>>];
+b:p -> objOP:v [label="points to"];
+objOP:v -> VT_OP [label="object's vptr"];
+}

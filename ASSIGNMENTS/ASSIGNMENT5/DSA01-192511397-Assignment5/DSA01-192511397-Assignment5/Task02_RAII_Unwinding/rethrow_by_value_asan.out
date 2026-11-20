@@ -1,0 +1,3 @@
+caught as Base, what=Derived
+outer, with throw;   what=Derived
+outer, with throw e; what=Base
